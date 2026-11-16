@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POS Plasita · Panel principal</title><link rel="stylesheet" href="css/styles.css"></head>
+<body data-page="panel">
+<header class="topbar"><h1>POS Plasita</h1><div class="chips"><span class="chip" id="chipUser"></span><span class="chip" id="chipCaja"></span><span class="chip" id="chipFecha"></span><span class="chip" id="net">Online</span></div></header>
+<div class="shell">
+<nav class="nav"><div class="who"><span class="muted">CAJA</span><b id="navCaja"></b><span id="navUser"></span><p class="muted" id="navRol"></p></div>
+<a href="panel.html" class="active">Resumen</a><a href="ventas.html">Ventas</a><button class="navbtn" data-go="inventario">Inventario</button><button class="navbtn" data-go="historial">Historial</button><button class="navbtn" data-go="reportes">Reportes</button><button class="navbtn" data-go="sync">Sincronización</button>
+<button class="navbtn foot" id="logout1">Cerrar sesión</button></nav>
+<main>
+<div class="page-head"><h2>Resumen del día</h2><b id="fechaLarga"></b></div>
+<section class="kpis"><div class="card kpi"><h3>Ventas del día</h3><p id="kVentas">S/0.00</p></div><div class="card kpi"><h3>Productos vendidos</h3><p id="kProd">0</p></div><div class="card kpi"><h3>Operaciones</h3><p id="kOps">0</p></div></section>
+<section class="two">
+<div class="card"><h3>Métodos de pago</h3><div class="pays" id="pays"></div></div>
+<div class="card"><h3>Estado de sincronización</h3><p class="muted" style="margin-top:8px">Última sincronización</p><b id="lastSync">—</b><p class="muted" style="margin-top:8px">Operaciones pendientes</p><b id="pend">0</b><div style="margin-top:10px"><button class="btn" id="sync1">Sincronizar ahora</button></div></div>
+</section>
+<section class="two">
+<div class="card"><h3>Accesos rápidos</h3><div class="quick"><button data-href="ventas.html">Nueva venta</button><button data-go="historial">Historial</button><button data-go="inventario">Inventario</button><button data-go="reportes">Reportes</button><button id="cierre1">Cierre de turno</button></div></div>
+<div class="card"><h3>Acciones rápidas</h3><div class="acts"><button class="btn" id="sync2">Sincronizar ahora</button><button class="btn" id="rep">Ver reporte diario</button><button class="btn" onclick="window.print()">Imprimir reporte</button><button class="btn danger" id="cierre2">Cerrar turno</button><button class="btn" id="logout2">Cerrar sesión</button><button class="btn" onclick="history.back()">Retroceder</button></div></div>
+</section></main></div>
+<dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB" style="margin:10px 0 16px;white-space:pre-line"></p><button class="btn primary" onclick="dlg.close()">Cerrar</button></dialog>
+<div class="toast" id="toast"></div>
+<script src="js/app.js"></script></body></html>

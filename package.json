@@ -1,0 +1,3 @@
+{ "name": "pos-plasita", "version": "1.0.0", "description": "POS Plasita con base de datos SQLite",
+  "scripts": { "start": "node --disable-warning=ExperimentalWarning server.js" },
+  "engines": { "node": ">=22.5" } }

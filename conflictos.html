@@ -1,0 +1,7 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/styles.css"><title>POS Plasita · Conflictos</title></head><body data-page="conflictos"><main id="main" data-title="Resolución de conflictos de sincronización">
+<div class="banner">Revisión manual requerida antes de resolver. No se sobrescriben conflictos silenciosamente.</div>
+<section class="two"><div><div class="card"><h3>Estados de sincronización</h3><div class="row"><span class="st o">● Pendiente</span><b id="cPend">0 registros</b></div></div>
+<div class="card" style="margin-top:12px"><h3>Registro que requiere revisión</h3><div id="cReg"></div></div></div>
+<div><div class="card"><h3>Detalle del conflicto</h3><ul><li>Confirma el identificador único por venta para evitar duplicados.</li><li>Verifica disponibilidad y consistencia del stock antes de confirmar.</li><li>Valida manualmente cada diferencia.</li></ul></div>
+<div class="card stack" style="margin-top:12px"><h3>Revisión y confirmación</h3><button class="btn" id="cRe">Reintentar conexión</button><button class="btn" id="cRev">Revisar ambas versiones</button><button class="btn primary" id="cOk" disabled>Confirmar resolución</button><p class="muted">Completa la revisión antes de confirmar. No se descartan registros automáticamente.</p></div></div></section></main>
+<div class="toast" id="toast"></div><script src="js/app.js"></script></body></html>
